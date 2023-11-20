@@ -1,5 +1,3 @@
-const  dotenv = require('dotenv');
-dotenv.config();
 require('./db.js')
 const  express = require('express');
 const userRoute = require("./router/user.js");
@@ -15,6 +13,6 @@ app.get('/api',(req,res)=>{
 app.use('/api/foods', foodRouter);
 app.use("/api/user", userRoute);
 
-app.listen(process.env.PORT, () => {
+app.listen(5000, () => {
   console.log('server started ');
 });
